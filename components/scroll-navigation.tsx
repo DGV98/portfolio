@@ -26,7 +26,7 @@ export function ScrollNavigation({ sections }: ScrollNavigationProps) {
         {
           threshold: 0.5,
           rootMargin: "-10% 0px -10% 0px",
-        }
+        },
       );
 
       observer.observe(element);
@@ -41,50 +41,28 @@ export function ScrollNavigation({ sections }: ScrollNavigationProps) {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const targetPosition = element.offsetTop;
-      const startPosition = window.scrollY;
-      const distance = targetPosition - startPosition;
-      const duration = 1200;
-      let start: number | null = null;
-
-      const easeInOutCubic = (t: number): number => {
-        return t < 0.5
-          ? 4 * t * t * t
-          : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      };
-
-      const animation = (currentTime: number) => {
-        if (start === null) start = currentTime;
-        const timeElapsed = currentTime - start;
-        const progress = Math.min(timeElapsed / duration, 1);
-        const ease = easeInOutCubic(progress);
-
-        window.scrollTo(0, startPosition + distance * ease);
-
-        if (timeElapsed < duration) {
-          requestAnimationFrame(animation);
-        }
-      };
-
-      requestAnimationFrame(animation);
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }
   };
 
   return (
     <nav className="fixed right-8 top-1/2 z-50 hidden -translate-y-1/2 lg:block">
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col items-end gap-4">
         {sections.map((section) => (
           <li key={section.id}>
             <button
               onClick={() => scrollToSection(section.id)}
-              className="group relative flex items-center gap-3"
+              className="group relative flex items-center justify-end"
               aria-label={`Navigate to ${section.label}`}
             >
               <span
-                className={`text-xs font-medium transition-all duration-300 ${
+                className={`absolute right-full mr-3 whitespace-nowrap text-xs font-medium transition-all duration-300 ${
                   activeSection === section.id
                     ? "translate-x-0 opacity-100 text-foreground"
-                    : "-translate-x-2 opacity-0 text-muted group-hover:translate-x-0 group-hover:opacity-100"
+                    : "translate-x-2 opacity-0 text-muted group-hover:translate-x-0 group-hover:opacity-100"
                 }`}
               >
                 {section.label}

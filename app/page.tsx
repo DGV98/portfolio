@@ -23,35 +23,33 @@ export default function Home() {
       </div>
 
       {/* Main content */}
-      <main className="flex-1 lg:ml-[37.5%] lg:pr-40">
-        <div className="scroll-smooth-custom">
-          <section
-            id="experience"
-            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
-          >
-            <div className="mx-auto w-full max-w-3xl">
-              <ExperienceSection entries={experience} />
-            </div>
-          </section>
+      <main className="flex-1 lg:ml-[37.5%] lg:pr-40 h-screen overflow-y-scroll snap-y snap-proximity scroll-smooth">
+        <section
+          id="experience"
+          className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16 snap-center snap-always"
+        >
+          <div className="mx-auto w-full max-w-3xl">
+            <ExperienceSection entries={experience} />
+          </div>
+        </section>
 
-          <section
-            id="projects"
-            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
-          >
-            <div className="mx-auto w-full max-w-3xl">
-              <ProjectsSection projects={projects} />
-            </div>
-          </section>
+        <section
+          id="projects"
+          className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16 snap-center snap-always"
+        >
+          <div className="mx-auto w-full max-w-3xl">
+            <ProjectsSection projects={projects} />
+          </div>
+        </section>
 
-          <section
-            id="publications"
-            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
-          >
-            <div className="mx-auto w-full max-w-3xl">
-              <PublicationsSection publications={publications} />
-            </div>
-          </section>
-        </div>
+        <section
+          id="publications"
+          className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16 snap-center snap-always"
+        >
+          <div className="mx-auto w-full max-w-3xl">
+            <PublicationsSection publications={publications} />
+          </div>
+        </section>
       </main>
 
       {/* Scroll Navigation */}
