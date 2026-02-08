@@ -14,6 +14,7 @@ export function Sidebar({ profile }: { profile: Profile }) {
           {profile.name}
         </h1>
         <p className="text-md font-medium text-accent">{profile.title}</p>
+        <p className="text-md font-medium text-accent">{profile.location}</p>
       </div>
 
       <p className="max-w-sm text-md leading-relaxed text-muted">

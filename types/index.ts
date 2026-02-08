@@ -7,6 +7,7 @@ export interface SocialLink {
 export interface Profile {
   name: string;
   title: string;
+  location: string;
   bio: string;
   initials: string;
   socialLinks: SocialLink[];

@@ -3,6 +3,7 @@ import { Profile } from "@/types";
 export const profile: Profile = {
   name: "David Gonzalez-Velez",
   title: "Software Engineer & Researcher",
+  location: "Chicago, Illinois",
   bio: "Passionate about building elegant solutions to complex problems. Interested in distributed systems, machine learning, and open-source software.",
   initials: "DGV",
   socialLinks: [
