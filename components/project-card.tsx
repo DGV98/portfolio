@@ -9,6 +9,12 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
+const priorities = {
+  primary: "sm:col-span-3",
+  secondary: "sm:col-span-2",
+  tertiary: "",
+};
+
 export function ProjectCard({ project }: { project: ProjectEntry }) {
   return (
     <motion.div
@@ -16,7 +22,7 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={`flex flex-col justify-between rounded-xl border border-border bg-card p-5 transition-colors hover:bg-card-hover ${
-        project.featured ? "sm:col-span-2" : ""
+        priorities[project.priority]
       }`}
     >
       <div>

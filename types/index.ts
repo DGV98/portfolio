@@ -8,6 +8,8 @@ export interface Profile {
   name: string;
   title: string;
   location: string;
+  degree: string;
+  school: string;
   bio: string;
   initials: string;
   socialLinks: SocialLink[];
@@ -27,7 +29,7 @@ export interface ProjectEntry {
   tags: string[];
   repoUrl?: string;
   demoUrl?: string;
-  featured: boolean;
+  priority: "primary" | "secondary" | "tertiary";
 }
 
 export interface PublicationEntry {

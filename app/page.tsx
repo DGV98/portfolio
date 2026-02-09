@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
       {/* Main content */}
-      <main className="flex-1 lg:ml-[37.5%] lg:pr-40 h-screen overflow-y-scroll snap-y snap-proximity scroll-smooth">
+      <main className="flex-1 lg:ml-[37.5%] lg:pr-40 h-screen overflow-y-scroll snap-y snap-proximity">
         <section
           id="experience"
           className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16 snap-center snap-always"
