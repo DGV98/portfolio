@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jane Doe — Portfolio",
+  title: "David Gonzalez-Velez",
   description: "Software Engineer & Researcher",
 };
 
