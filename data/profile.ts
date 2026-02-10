@@ -4,7 +4,7 @@ export const profile: Profile = {
   name: "David Gonzalez-Velez",
   title: "Software Engineer & Researcher",
   location: "Chicago, Illinois",
-  degree: "B.S. Molecular Engineering - Quantum",
+  degree: "B.S. Molecular Engineering (Quantum)",
   school: "University of Chicago",
   bio: "Hi, I am a self taught software engineer with a passion for quantum computation and the computers of tomorrow.",
   initials: "DGV",
