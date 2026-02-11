@@ -2,21 +2,30 @@ import { ProjectEntry } from "@/types";
 
 export const projects: ProjectEntry[] = [
   {
-    title: "MathGen",
+    title: "Face Recognition",
     description:
-      "Full-stack math application with Python API and React frontend for interactive mathematical computations",
-    tags: ["React", "Flask", "SQLite"],
-    repoUrl: "https://github.com",
-    demoUrl: "https://example.com",
+      "A full-stack web application developed to track attendance at community tabling events while preserving visitor anonymity. The app leverages browser-based facial recognition to detect repeat visitors and maintain accurate attendance counts — all without storing personally identifiable information.",
+    tags: ["TypeScript", "React", "TensorFlow"],
+    // repoUrl: "https://github.com/DGV98/fullstack-math",
+    demoUrl: "https://community-os-7qjn.vercel.app/",
     priority: "primary",
+  },
+  {
+    title: "Game Hub",
+    description:
+      "A game discovery and browsing web application built with React and TypeScript, allowing users to explore and filter video games from a comprehensive games database",
+    tags: ["TypeScript", "React"],
+    repoUrl: "https://github.com/DGV98/game-hub-clone",
+    demoUrl: "https://game-hub-tan-one.vercel.app/",
+    priority: "secondary",
   },
   {
     title: "Terminal Games",
     description:
-      "Python module to play interactive ascii-style games within your terminal",
+      "A Python module for building and playing interactive ascii-style games directly in the terminal using the curses library.",
     tags: ["Python", "curses"],
-    repoUrl: "https://github.com",
-    priority: "secondary",
+    repoUrl: "https://github.com/DGV98/term_games",
+    priority: "tertiary",
   },
   {
     title: "DARCH",
@@ -25,22 +34,12 @@ export const projects: ProjectEntry[] = [
     repoUrl: "https://github.com/DGV98/DARCH",
     priority: "tertiary",
   },
-
-  {
-    title: "Valentines Day Project",
-    description:
-      "Terminal-based dashboard for monitoring Kubernetes clusters with real-time metrics.",
-    tags: ["HTML", "CSS", "JS"],
-    repoUrl: "https://github.com/DGV98/valentines",
-    demoUrl: "https://valentines-swart-two.vercel.app/",
-    priority: "tertiary",
-  },
   {
     title: "Summer Programs Scraper",
     description:
-      "Minimal static site generator with Markdown support, hot reloading, and plugin system.",
-    tags: ["TypeScript", "Node.js"],
-    repoUrl: "https://github.com",
+      "A Django-based web scraping platform that consolidates summer program information from multiple websites into a unified, searchable database.",
+    tags: ["SQLite", "Pandas", "Django"],
+    repoUrl: "https://github.com/DGV98/Scraper",
     priority: "secondary",
   },
 ];
