@@ -16,14 +16,14 @@ const sections = [
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col lg:flex-row">
+    <div className="flex h-screen flex-col overflow-y-auto lg:flex-row lg:overflow-hidden">
       {/* Sidebar */}
       <div className="shrink-0 border-b border-border lg:fixed lg:flex lg:h-screen lg:w-3/8 lg:items-center lg:justify-center lg:border-b-0 lg:border-r">
         <Sidebar profile={profile} />
       </div>
 
       {/* Main content */}
-      <main className="flex-1 lg:ml-[37.5%] lg:pr-40 h-screen overflow-y-scroll snap-y snap-mandatory">
+      <main className="flex-1 lg:ml-[37.5%] lg:pr-40 lg:h-screen lg:overflow-y-scroll lg:snap-y lg:snap-mandatory">
         <section
           id="experience"
           className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16 snap-center snap-always"
