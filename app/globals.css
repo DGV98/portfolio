@@ -45,23 +45,8 @@ body {
   }
 }
 
-@keyframes disappear {
-  from {
-    opacity: 1;
-    scale: 1;
-  }
-  to {
-    opacity: 0;
-    scale: 0.5;
-  }
-}
-
 section {
-  animation:
-    appear ease-in,
-    disappear ease-out;
-  animation-timeline: view(), view();
-  animation-range:
-    entry 0% cover 50%,
-    exit 50% exit 100%;
+  animation: appear ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% entry 50%;
 }

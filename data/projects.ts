@@ -4,7 +4,7 @@ export const projects: ProjectEntry[] = [
   {
     title: "Face Recognition",
     description:
-      "A full-stack web application developed to track attendance at community tabling events while preserving visitor anonymity. The app leverages browser-based facial recognition to detect repeat visitors and maintain accurate attendance counts — all without storing personally identifiable information.",
+      "Privacy-first attendance tracker using browser-based facial recognition to count repeat visitors without storing personal data.",
     tags: ["TypeScript", "React", "TensorFlow"],
     // repoUrl: "https://github.com/DGV98/fullstack-math",
     demoUrl: "https://community-os-7qjn.vercel.app/",
@@ -13,7 +13,7 @@ export const projects: ProjectEntry[] = [
   {
     title: "Game Hub",
     description:
-      "A game discovery and browsing web application built with React and TypeScript, allowing users to explore and filter video games from a comprehensive games database",
+      "Game discovery app for browsing and filtering video games from a comprehensive games database.",
     tags: ["TypeScript", "React"],
     repoUrl: "https://github.com/DGV98/game-hub-clone",
     demoUrl: "https://game-hub-tan-one.vercel.app/",
@@ -22,7 +22,7 @@ export const projects: ProjectEntry[] = [
   {
     title: "Terminal Games",
     description:
-      "A Python module for building and playing interactive ascii-style games directly in the terminal using the curses library.",
+      "Interactive ASCII games playable directly in the terminal using Python's curses library.",
     tags: ["Python", "curses"],
     repoUrl: "https://github.com/DGV98/term_games",
     priority: "tertiary",
@@ -37,7 +37,7 @@ export const projects: ProjectEntry[] = [
   {
     title: "Summer Programs Scraper",
     description:
-      "A Django-based web scraping platform that consolidates summer program information from multiple websites into a unified, searchable database.",
+      "Web scraper that aggregates summer program listings from multiple sites into one searchable database.",
     tags: ["SQLite", "Pandas", "Django"],
     repoUrl: "https://github.com/DGV98/Scraper",
     priority: "secondary",
