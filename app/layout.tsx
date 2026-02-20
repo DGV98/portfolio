@@ -127,6 +127,7 @@ export default function RootLayout({
         />
         {children}
       </body>
+      <SpeedInsights />
     </html>
   );
 }
