@@ -1,0 +1,65 @@
+# David Gonzalez-Velez
+
+> Self-taught software engineer and researcher based in Chicago, Illinois, specializing in quantum computation, full-stack development, and AI-driven applications.
+
+## About
+
+- Name: David Gonzalez-Velez
+- Location: Chicago, Illinois
+- Degree: B.S. Molecular Engineering (Quantum), University of Chicago
+- Email: davidgonzalez1019@gmail.com
+- GitHub: https://github.com/DGV98
+- LinkedIn: https://www.linkedin.com/in/david-gonzalez-velez-379049100/
+
+## Experience
+
+### Software Developer — SnapOn Credit (May 2025 – Present)
+- Modernized legacy PICK Basic collection system for 300+ users with Python/HTML/CSS interfaces
+- Built SMS delivery system replacing carrier email-to-text, handling 1,000–2,000 messages/month
+- Migrated legacy platform to modern terminal emulator and API-driven architecture
+
+### Research Assistant — Loyola University Chicago (Oct 2023 – Present)
+- Built full-stack facial recognition app with React, Flask, and Vercel; implemented CI/CD pipeline with GitHub Actions
+- Improved system accuracy by 50% through Chakra UI redesign and facial embedding threshold optimization
+- Led project management through stand-ups, Kanban tracking, and stakeholder collaboration
+
+### Senior Software Engineer — Smyl Fitness (Jan 2023 – Sep 2024)
+- Led 2 development teams to ship functional health screening software in 3 months
+- Integrated MoveNet pose estimation, improving screening precision by 50%
+
+## Projects
+
+### Face Recognition
+Privacy-first attendance tracker using browser-based facial recognition to count repeat visitors without storing personal data.
+Tags: TypeScript, React, TensorFlow
+Demo: https://community-os-7qjn.vercel.app/
+
+### Game Hub
+Game discovery app for browsing and filtering video games from a comprehensive games database.
+Tags: TypeScript, React
+Repo: https://github.com/DGV98/game-hub-clone
+Demo: https://game-hub-tan-one.vercel.app/
+
+### Terminal Games
+Interactive ASCII games playable directly in the terminal using Python's curses library.
+Tags: Python, curses
+Repo: https://github.com/DGV98/term_games
+
+### DARCH
+Dotfiles for Arch Linux/Hyprland rice.
+Tags: Hyprland, Arch Linux, Lua
+Repo: https://github.com/DGV98/DARCH
+
+### Summer Programs Scraper
+Web scraper that aggregates summer program listings from multiple sites into one searchable database.
+Tags: SQLite, Pandas, Django
+Repo: https://github.com/DGV98/Scraper
+
+## Publications
+
+- "Characterizing Emergency Department Visits for Product-Related Head Injuries in the United States 2014 to 2024" — JACEP Open, 2025. https://doi.org/10.1016/j.acepjo.2025.100256
+- "Epidemiology of emergency department visits for burn injuries in the United States, 2014–2023" — Burns, 2025. https://www.sciencedirect.com/science/article/pii/S0305417925004310
+
+## Skills
+
+TypeScript, React, Python, Django, Flask, TensorFlow, Next.js, SQL, Tailwind CSS, Git, GitHub Actions, Vercel, Quantum Computing, Molecular Engineering
