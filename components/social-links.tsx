@@ -1,10 +1,4 @@
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Twitter,
-  GraduationCap,
-} from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, GraduationCap } from "lucide-react";
 import { SocialLink } from "@/types";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {

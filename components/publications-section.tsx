@@ -12,7 +12,11 @@ const containerVariants = {
   },
 };
 
-export function PublicationsSection({ publications }: { publications: PublicationEntry[] }) {
+export function PublicationsSection({
+  publications,
+}: {
+  publications: PublicationEntry[];
+}) {
   return (
     <section>
       <SectionHeading>Publications</SectionHeading>
