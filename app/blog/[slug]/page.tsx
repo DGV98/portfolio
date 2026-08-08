@@ -1,3 +1,4 @@
+import Banner from "@/components/banner";
 import { notFound } from "next/navigation";
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -6,7 +7,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { default: Content, metadata } = post;
   try {
     return metadata.published ? (
-      <article className="prose dark:prose-invert w-full max-w-3xl mx-auto">
+      <article className="flex flex-col justify-center items-center mt-4">
+        <Banner />
         <div className="space-y-4">
           <h1>{metadata.title}</h1>
           <div>{metadata.publishDate}</div>
