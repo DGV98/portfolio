@@ -7,7 +7,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const post = await import(`@/posts/${slug}.mdx`);
     const { default: Content, metadata } = post;
     return metadata.published ? (
-      <article className="flex flex-col justify-center items-center mt-4">
+      <article className="mt-4 flex flex-col items-center justify-center">
         <Banner />
         <div className="space-y-4">
           <h1>{metadata.title}</h1>

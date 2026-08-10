@@ -13,14 +13,14 @@ export function PublicationCard({ pub }: { pub: PublicationEntry }) {
   return (
     <motion.div
       variants={cardVariants}
-      className="flex flex-col justify-between rounded-xl border border-border bg-card p-5"
+      className="border-border bg-card flex flex-col justify-between rounded-xl border p-5"
     >
       <div>
-        <h3 className="mb-2 text-sm font-semibold leading-snug text-foreground">
+        <h3 className="text-foreground mb-2 text-sm leading-snug font-semibold">
           {pub.title}
         </h3>
-        <p className="mb-1 text-xs text-muted">{pub.authors}</p>
-        <p className="text-xs text-muted">
+        <p className="text-muted mb-1 text-xs">{pub.authors}</p>
+        <p className="text-muted text-xs">
           {pub.venue}, {pub.year}
         </p>
       </div>
@@ -30,7 +30,7 @@ export function PublicationCard({ pub }: { pub: PublicationEntry }) {
           href={pub.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-accent transition-colors hover:text-foreground"
+          className="text-accent hover:text-foreground mt-4 inline-flex items-center gap-1 text-xs font-medium transition-colors"
         >
           View paper <ExternalLink className="h-3 w-3" />
         </a>

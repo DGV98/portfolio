@@ -9,7 +9,7 @@ export function useMDXComponents(
     p: (props) => <p className="mt-4 text-base leading-relaxed" {...props} />,
     code: (props) => (
       <code
-        className="px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800"
+        className="rounded bg-zinc-100 px-1.5 py-0.5 dark:bg-zinc-800"
         {...props}
       />
     ),

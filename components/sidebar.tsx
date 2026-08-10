@@ -14,16 +14,16 @@ export function Sidebar({ profile }: { profile: Profile }) {
       />
 
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight text-foreground">
+        <h1 className="text-foreground text-3xl font-bold tracking-tight">
           {profile.name}
         </h1>
-        <p className="text-md font-medium text-accent">{profile.title}</p>
-        <p className="text-sm text-muted tracking-widest font-semibold">
+        <p className="text-md text-accent font-medium">{profile.title}</p>
+        <p className="text-muted text-sm font-semibold tracking-widest">
           {profile.location} • {profile.degree}
         </p>
       </div>
 
-      <p className="max-w-sm text-md leading-relaxed text-muted">
+      <p className="text-md text-muted max-w-sm leading-relaxed">
         {profile.bio}
       </p>
 
