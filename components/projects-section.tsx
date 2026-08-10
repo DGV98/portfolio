@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ProjectEntry } from "@/types";
 import { SectionHeading } from "./section-heading";
 import { ProjectCard } from "./project-card";

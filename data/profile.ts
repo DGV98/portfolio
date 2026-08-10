@@ -15,7 +15,7 @@ export const profile: Profile = {
       url: "https://www.linkedin.com/in/david-gonzalez-velez-379049100/",
       icon: "linkedin",
     },
-    { name: "Email", url: "mailto:davidgonzalez1019@gmail.com", icon: "mail" },
+    { name: "Email", url: "mailto:david@hellodavid.dev", icon: "mail" },
     // { name: "X", url: "https://x.com", icon: "twitter" },
     // { name: "Google Scholar", url: "https://scholar.google.com", icon: "graduation-cap" },
   ],

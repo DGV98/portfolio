@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { PublicationEntry } from "@/types";
 import { SectionHeading } from "./section-heading";
 import { PublicationCard } from "./publication-card";
