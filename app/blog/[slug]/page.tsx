@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
-  const post = await import(`@/posts/${slug}.mdx`);
-  const { default: Content, metadata } = post;
   try {
+    const post = await import(`@/posts/${slug}.mdx`);
+    const { default: Content, metadata } = post;
     return metadata.published ? (
       <article className="flex flex-col justify-center items-center mt-4">
         <Banner />
