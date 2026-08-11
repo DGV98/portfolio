@@ -4,20 +4,22 @@ import ProfilePicture from "./profile-picture";
 
 export function Sidebar({ profile }: { profile: Profile }) {
   return (
-    <aside className="flex flex-col items-center gap-6 px-8 py-12 text-center lg:justify-self-center">
+    <aside className="flex flex-col items-center gap-6 px-8 py-4 text-center lg:justify-self-center">
       <ProfilePicture />
 
-      <div className="space-y-2">
-        <h1 className="text-foreground text-3xl font-bold tracking-tight">
+      <div className="space-y-1 lg:space-y-2">
+        <h1 className="text-foreground text-3xl font-bold tracking-tight lg:text-4xl">
           {profile.name}
         </h1>
-        <p className="text-md text-accent font-medium">{profile.title}</p>
-        <p className="text-muted text-sm font-semibold tracking-widest">
+        <p className="text-md text-accent text-md font-semibold">
+          {profile.title}
+        </p>
+        <p className="text-muted text-md font-semibold tracking-widest">
           {profile.location} • {profile.degree}
         </p>
       </div>
 
-      <p className="text-md text-muted max-w-sm leading-relaxed">
+      <p className="text-muted max-w-sm text-sm leading-relaxed">
         {profile.bio}
       </p>
 
