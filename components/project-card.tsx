@@ -21,7 +21,7 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
       variants={cardVariants}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={`border-border bg-card hover:bg-card-hover flex flex-col justify-between rounded-xl border p-5 transition-colors ${
+      className={`border-border bg-card hover:bg-card-hover flex flex-col justify-between rounded-xl border p-4 transition-colors ${
         priorities[project.priority]
       }`}
     >
@@ -29,17 +29,17 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
         <h3 className="text-foreground mb-2 text-sm font-semibold">
           {project.title}
         </h3>
-        <p className="text-muted mb-4 text-sm leading-relaxed">
+        <p className="text-muted mb-2 text-sm leading-relaxed">
           {project.description}
         </p>
       </div>
 
       <div className="flex items-end justify-between">
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-1">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="bg-accent/10 text-accent rounded-full px-2.5 py-0.5 text-xs font-medium"
+              className="bg-accent/10 text-accent rounded-full px-2 py-0.5 text-xs font-medium"
             >
               {tag}
             </span>

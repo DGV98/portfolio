@@ -21,7 +21,7 @@ export function ProjectsSection({ projects }: { projects: ProjectEntry[] }) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
-        className="grid grid-cols-1 gap-4 sm:grid-cols-3"
+        className="grid grid-cols-1 gap-3 sm:grid-cols-3"
       >
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />

@@ -9,12 +9,6 @@ import { projects } from "@/data/projects";
 import { publications } from "@/data/publications";
 import Banner from "@/components/banner";
 
-const sections = [
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-  { id: "publications", label: "Publications" },
-];
-
 export default function Home() {
   return (
     <div>
@@ -26,10 +20,10 @@ export default function Home() {
         </div>
 
         {/* Main content */}
-        <main className="flex-1 lg:ml-[37.5%] lg:h-screen lg:pr-40">
+        <main className="flex-1 lg:ml-[37.5%] lg:h-screen lg:snap-y lg:snap-proximity lg:pr-40">
           <section
             id="experience"
-            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
+            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:snap-start lg:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <ExperienceSection entries={experience} />
@@ -38,7 +32,7 @@ export default function Home() {
 
           <section
             id="projects"
-            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
+            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:snap-start lg:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <ProjectsSection projects={projects} />
@@ -47,7 +41,7 @@ export default function Home() {
 
           <section
             id="publications"
-            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
+            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:snap-start lg:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <PublicationsSection publications={publications} />
@@ -56,7 +50,7 @@ export default function Home() {
         </main>
 
         {/* Scroll Navigation */}
-        <ScrollNavigation sections={sections} />
+        <ScrollNavigation />
       </div>
     </div>
   );

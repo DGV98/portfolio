@@ -2,7 +2,7 @@ import { ExperienceEntry } from "@/types";
 
 export function ExperienceItem({ entry }: { entry: ExperienceEntry }) {
   return (
-    <div className="relative flex gap-6 pb-10 last:pb-0">
+    <div className="relative flex gap-6 pb-2 last:pb-0">
       {/* Timeline line + dot */}
       <div className="flex flex-col items-center">
         <div className="border-accent bg-background mt-1.5 h-3 w-3 rounded-full border-2" />

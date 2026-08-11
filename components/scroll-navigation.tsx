@@ -2,14 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-interface ScrollNavigationProps {
-  sections: Array<{
-    id: string;
-    label: string;
-  }>;
-}
+const sections = [
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "publications", label: "Publications" },
+];
 
-export function ScrollNavigation({ sections }: ScrollNavigationProps) {
+export function ScrollNavigation() {
   const [activeSection, setActiveSection] = useState(sections[0]?.id || "");
 
   useEffect(() => {
