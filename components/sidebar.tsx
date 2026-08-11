@@ -1,12 +1,10 @@
 import { Profile } from "@/types";
-import Image from "next/image";
 import { SocialLinks } from "./social-links";
 import ProfilePicture from "./profile-picture";
 
 export function Sidebar({ profile }: { profile: Profile }) {
   return (
     <aside className="flex flex-col items-center gap-6 px-8 py-12 text-center lg:justify-self-center">
-      {/* Placeholder avatar */}
       <ProfilePicture />
 
       <div className="space-y-2">

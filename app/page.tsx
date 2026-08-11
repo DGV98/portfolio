@@ -18,18 +18,18 @@ const sections = [
 export default function Home() {
   return (
     <div>
-      <Banner />
-      <div className="flex h-screen flex-col overflow-y-auto lg:flex-row lg:overflow-hidden">
+      {/* <Banner /> */}
+      <div className="flex h-screen flex-col lg:flex-row">
         {/* Sidebar */}
         <div className="border-border shrink-0 border-b lg:fixed lg:flex lg:h-screen lg:w-3/8 lg:items-center lg:justify-center lg:border-r lg:border-b-0">
           <Sidebar profile={profile} />
         </div>
 
         {/* Main content */}
-        <main className="flex-1 lg:ml-[37.5%] lg:h-screen lg:snap-y lg:snap-mandatory lg:overflow-y-scroll lg:pr-40">
+        <main className="flex-1 lg:ml-[37.5%] lg:h-screen lg:pr-40">
           <section
             id="experience"
-            className="flex min-h-screen snap-center snap-always items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
+            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <ExperienceSection entries={experience} />
@@ -38,7 +38,7 @@ export default function Home() {
 
           <section
             id="projects"
-            className="flex min-h-screen snap-center snap-always items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
+            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <ProjectsSection projects={projects} />
@@ -47,7 +47,7 @@ export default function Home() {
 
           <section
             id="publications"
-            className="flex min-h-screen snap-center snap-always items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
+            className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10 lg:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <PublicationsSection publications={publications} />

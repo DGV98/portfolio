@@ -27,35 +27,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-* {
+/* * {
   scrollbar-width: none;
-}
+} */
 
 *::-webkit-scrollbar {
   display: none;
-}
-
-/* Mandatory scroll snap behavior */
-.snap-always {
-  scroll-snap-stop: always;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.5;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-section {
-  animation: appear ease-out;
-  animation-timeline: view();
-  animation-range: entry 0% entry 50%;
 }
