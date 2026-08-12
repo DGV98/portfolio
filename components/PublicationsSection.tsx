@@ -18,8 +18,8 @@ export function PublicationsSection({
         <p className="col-span-2 px-2">JOURNAL</p>
         <div className="col-span-1"></div>
       </div>
-      {publications.map((i, pub) => (
-        <PublicationCard pub={pub} key={i}/>
+      {publications.map((pub, i) => (
+        <PublicationCard key={i} pub={pub} />
       ))}
     </section>
   );
