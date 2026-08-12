@@ -39,9 +39,9 @@ export default function Home() {
 
           <section
             id="publications"
-            className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:px-10 xl:py-16"
+            className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:py-16"
           >
-            <div className="mx-auto w-full max-w-3xl">
+            <div className="w-full max-w-3xl">
               <PublicationsSection publications={publications} />
             </div>
           </section>

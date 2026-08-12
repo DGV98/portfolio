@@ -35,7 +35,7 @@ export interface ProjectEntry {
 export interface PublicationEntry {
   title: string;
   authors: string;
-  venue: string;
+  journal: string;
   year: number;
   url?: string;
 }

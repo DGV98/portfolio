@@ -1,16 +1,25 @@
-import Link from "next/link";
+"use client";
+
 import { MoveUpRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const BlogLink = () => {
+  const router = useRouter();
+
+  const goToBlog = () => {
+    router.push("/blog");
+  };
   return (
-    <div className="border-border flex items-center justify-center gap-2 border-l-2 px-3">
-      <MoveUpRight className="text-accent h-5 w-5" />
-      <Link
-        href="/blog"
-        className="text-muted hover:text-foreground text-sm font-bold"
+    <div className="border-border group border-l-2 px-2">
+      <button
+        onClick={goToBlog}
+        className="border-accent group-hover:border-foreground flex cursor-pointer items-center gap-2 rounded-lg border-2 px-2 py-1"
       >
-        Blog
-      </Link>
+        <h1 className="text-accent group-hover:text-foreground text-sm">
+          Blog
+        </h1>
+        <MoveUpRight className="text-accent group-hover:text-foreground h-4 w-4" />
+      </button>
     </div>
   );
 };
