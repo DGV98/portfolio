@@ -1,6 +1,6 @@
 "use client";
 
-import { MoveUpRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 const BlogLink = () => {
@@ -18,7 +18,7 @@ const BlogLink = () => {
         <h1 className="text-accent group-hover:text-foreground text-sm">
           Blog
         </h1>
-        <MoveUpRight className="text-accent group-hover:text-foreground h-4 w-4" />
+        <ExternalLink className="text-accent group-hover:text-foreground h-4 w-4" />
       </button>
     </div>
   );

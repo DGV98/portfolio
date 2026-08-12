@@ -6,9 +6,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   try {
     const post = await import(`@/posts/${slug}.mdx`);
     const { default: Content, metadata } = post;
-    return metadata.published ? (
+    const today = new Date();
+    return metadata.published && new Date(metadata.publishDate) <= today ? (
       <article className="mt-4 flex flex-col items-center justify-center">
-        <Banner />
         <div className="space-y-4">
           <h1>{metadata.title}</h1>
           <div>{metadata.publishDate}</div>
