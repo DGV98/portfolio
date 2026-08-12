@@ -9,18 +9,16 @@ export function ProfileSection({ profile }: { profile: Profile }) {
       <Banner />
       <ProfilePicture />
 
-      <div className="space-y-1 lg:space-y-2">
-        <h1 className="text-foreground text-2xl font-bold tracking-tight lg:text-3xl">
-          {profile.name}
-        </h1>
-        <p className="text-accent text-base font-semibold lg:text-lg">
+      <div className="space-y-2">
+        <h1 className="text-foreground text-2xl font-bold">{profile.name}</h1>
+        <p className="text-accent text-sm font-semibold lg:text-base">
           {profile.title}
         </p>
-        <p className="text-muted text-base font-semibold lg:text-lg">
+        <p className="text-muted text-sm font-semibold lg:text-base">
           {profile.location}
         </p>
       </div>
-      <p className="text-muted max-w-sm text-sm leading-relaxed lg:text-base">
+      <p className="text-muted max-w-sm text-sm leading-relaxed">
         {profile.bio}
       </p>
 
