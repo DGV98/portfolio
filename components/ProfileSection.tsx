@@ -5,23 +5,22 @@ import Banner from "./Banner";
 
 export function ProfileSection({ profile }: { profile: Profile }) {
   return (
-    <aside className="flex flex-col items-center gap-6 px-8 py-4 text-center lg:justify-self-center">
+    <aside className="flex flex-col items-center gap-6 p-8 text-center lg:items-start lg:text-left">
       <Banner />
-      {/* <ProfilePicture /> */}
+      <ProfilePicture />
 
       <div className="space-y-1 lg:space-y-2">
-        <h1 className="text-foreground text-3xl font-bold tracking-tight lg:text-4xl">
+        <h1 className="text-foreground text-2xl font-bold tracking-tight lg:text-3xl">
           {profile.name}
         </h1>
-        <p className="text-md text-accent text-md font-semibold">
+        <p className="text-accent text-base font-semibold lg:text-lg">
           {profile.title}
         </p>
-        <p className="text-muted text-md font-semibold tracking-widest">
-          {profile.location} • {profile.degree}
+        <p className="text-muted text-base font-semibold lg:text-lg">
+          {profile.location}
         </p>
       </div>
-
-      <p className="text-muted max-w-sm text-sm leading-relaxed">
+      <p className="text-muted max-w-sm text-sm leading-relaxed lg:text-base">
         {profile.bio}
       </p>
 

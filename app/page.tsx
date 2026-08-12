@@ -7,20 +7,18 @@ import { profile } from "@/data/profile";
 import { experience } from "@/data/experience";
 import { projects } from "@/data/projects";
 import { publications } from "@/data/publications";
-import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
     <div>
-      <Banner />
       <div className="flex h-screen flex-col lg:flex-row">
         {/* Sidebar */}
-        <div className="border-border shrink-0 border-b lg:fixed lg:flex lg:h-screen lg:w-3/8 lg:items-center lg:justify-center lg:border-r lg:border-b-0">
+        <div className="border-border shrink-0 border-b lg:fixed lg:flex lg:h-screen lg:w-1/4 lg:border-r lg:border-b-0">
           <ProfileSection profile={profile} />
         </div>
 
         {/* Main content */}
-        <main className="flex-1 lg:ml-[37.5%] lg:h-screen lg:snap-y lg:snap-mandatory lg:overflow-y-auto lg:pr-40">
+        <main className="flex-1 lg:ml-[25%] lg:h-screen lg:snap-y lg:snap-mandatory lg:overflow-y-auto lg:pr-40">
           <section
             id="experience"
             className="flex items-center justify-center px-6 py-8 sm:px-10 lg:min-h-screen lg:snap-center lg:py-16"
