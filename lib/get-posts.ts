@@ -1,30 +1,30 @@
 // TODO: Do this with frontmatter, it is just parsing the metadata with a regex
 
-function extractMetadata(source: string) {
-    const match = source.match(/export const metadata = ({[\s\S]*?});/);
-    if (!match) return null;
-    try {
-        return new Function(`return ${match[1]}`)();
-    } catch (err) {
-        console.error("Failed to parse metadata: ", err);
-        return null;
-    }
-};
+// function extractMetadata(source: string) {
+//     const match = source.match(/export const metadata = ({[\s\S]*?});/);
+//     if (!match) return null;
+//     try {
+//         return new Function(`return ${match[1]}`)();
+//     } catch (err) {
+//         console.error("Failed to parse metadata: ", err);
+//         return null;
+//     }
+// };
 
-export async function getAllPosts() {
-    const files = await fs.readdir(postsDir)
+// export async function getAllPosts() {
+//     const files = await fs.readdir(postsDir)
 
-    const posts = await Promist.all(
-        files
-            .filter((file) => file.endsWith(".mdx"))
-            .map(async (filename) => {
-                const source = await fs.readFile(filePath, "utf8")
-                const metadata = extractMetadata(source)
-                return {
-                    slug: path.basename(filename, ".mdx"),
-                    metadata
-                }
-            })
-    )
-    return posts.filter((post) => post.metadata)
-}
+//     const posts = await Promist.all(
+//         files
+//             .filter((file) => file.endsWith(".mdx"))
+//             .map(async (filename) => {
+//                 const source = await fs.readFile(filePath, "utf8")
+//                 const metadata = extractMetadata(source)
+//                 return {
+//                     slug: path.basename(filename, ".mdx"),
+//                     metadata
+//                 }
+//             })
+//     )
+//     return posts.filter((post) => post.metadata)
+// }
