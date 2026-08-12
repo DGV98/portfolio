@@ -1,6 +1,6 @@
 import { ExperienceEntry } from "@/types";
-import { SectionHeading } from "./section-heading";
-import { ExperienceItem } from "./experience-item";
+import { SectionHeading } from "./SectionHeading";
+import { ExperienceItem } from "./ExperienceItem";
 
 export function ExperienceSection({ entries }: { entries: ExperienceEntry[] }) {
   return (

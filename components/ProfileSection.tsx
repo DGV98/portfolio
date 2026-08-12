@@ -1,11 +1,13 @@
 import { Profile } from "@/types";
-import { SocialLinks } from "./social-links";
-import ProfilePicture from "./profile-picture";
+import { SocialLinks } from "./SocialLinks";
+import ProfilePicture from "./ProfilePicture";
+import Banner from "./Banner";
 
-export function Sidebar({ profile }: { profile: Profile }) {
+export function ProfileSection({ profile }: { profile: Profile }) {
   return (
     <aside className="flex flex-col items-center gap-6 px-8 py-4 text-center lg:justify-self-center">
-      <ProfilePicture />
+      <Banner />
+      {/* <ProfilePicture /> */}
 
       <div className="space-y-1 lg:space-y-2">
         <h1 className="text-foreground text-3xl font-bold tracking-tight lg:text-4xl">

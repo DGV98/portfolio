@@ -2,8 +2,8 @@
 
 import { motion } from "motion/react";
 import { ProjectEntry } from "@/types";
-import { SectionHeading } from "./section-heading";
-import { ProjectCard } from "./project-card";
+import { SectionHeading } from "./SectionHeading";
+import { ProjectCard } from "./ProjectCard";
 
 const containerVariants = {
   hidden: {},

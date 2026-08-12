@@ -1,4 +1,4 @@
-import Banner from "@/components/banner";
+import Banner from "@/components/Banner";
 import { notFound } from "next/navigation";
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {

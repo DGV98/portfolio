@@ -1,13 +1,13 @@
-import { Sidebar } from "@/components/sidebar";
-import { ExperienceSection } from "@/components/experience-section";
-import { ProjectsSection } from "@/components/projects-section";
-import { PublicationsSection } from "@/components/publications-section";
-import { ScrollNavigation } from "@/components/scroll-navigation";
+import { ProfileSection } from "@/components/ProfileSection";
+import { ExperienceSection } from "@/components/ExperienceSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
+import { PublicationsSection } from "@/components/PublicationsSection";
+import { ScrollNavigation } from "@/components/ScrollNavigation";
 import { profile } from "@/data/profile";
 import { experience } from "@/data/experience";
 import { projects } from "@/data/projects";
 import { publications } from "@/data/publications";
-import Banner from "@/components/banner";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <div className="flex h-screen flex-col lg:flex-row">
         {/* Sidebar */}
         <div className="border-border shrink-0 border-b lg:fixed lg:flex lg:h-screen lg:w-3/8 lg:items-center lg:justify-center lg:border-r lg:border-b-0">
-          <Sidebar profile={profile} />
+          <ProfileSection profile={profile} />
         </div>
 
         {/* Main content */}

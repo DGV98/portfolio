@@ -2,8 +2,8 @@
 
 import { motion } from "motion/react";
 import { PublicationEntry } from "@/types";
-import { SectionHeading } from "./section-heading";
-import { PublicationCard } from "./publication-card";
+import { SectionHeading } from "./SectionHeading";
+import { PublicationCard } from "./PublicationCard";
 
 const containerVariants = {
   hidden: {},
