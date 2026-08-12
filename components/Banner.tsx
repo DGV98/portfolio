@@ -3,12 +3,13 @@ import Link from "next/link";
 // TODO: Banner for blogs
 const Banner = () => {
   return (
-    <nav className="">
-      <Link href="/" className="font-terminal text-3xl lg:text-4xl">
+    <div className="flex flex-col text-right text-3xl font-bold lg:text-5xl">
+      <p className="font-terminal text-banner">hellodavid</p>
+      <p className="font-terminal text-accent">.dev</p>
+      {/* <Link href="/" className="font-terminal text-3xl lg:text-4xl">
         hellodavid<span className="text-accent">.dev</span>
-      </Link>
-      <div></div>
-    </nav>
+      </Link> */}
+    </div>
   );
 };
 

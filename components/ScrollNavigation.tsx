@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import BlogLink from "./BlogLink";
 
 const sections = [
   { id: "experience", label: "Experience" },
@@ -48,20 +49,22 @@ export function ScrollNavigation() {
   };
 
   return (
-    <nav className="fixed top-1/2 right-8 z-50 hidden -translate-y-1/2 lg:block">
+    <nav className="fixed top-1/2 right-8 z-50 hidden -translate-y-1/2 xl:block">
       <ul className="flex flex-col items-end gap-4">
         {sections.map((section) => (
           <li key={section.id}>
             <button
               onClick={() => scrollToSection(section.id)}
-              className="group relative flex items-center justify-end"
+              className="group flex items-center justify-end"
               aria-label={`Navigate to ${section.label}`}
             >
               <span
-                className={`absolute right-full mr-3 text-xs font-medium whitespace-nowrap transition-all duration-300 ${
+                className={`mr-3 text-xs font-medium whitespace-nowrap transition-all duration-300 ${
                   activeSection === section.id
                     ? "text-foreground translate-x-0 opacity-100"
                     : "text-muted translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                  // ? "text-foreground translate-x-0"
+                  // : "text-muted translate-x-2 group-hover:translate-x-0"
                 }`}
               >
                 {section.label}
@@ -69,8 +72,8 @@ export function ScrollNavigation() {
               <span
                 className={`block h-2 rounded-full transition-all duration-300 ${
                   activeSection === section.id
-                    ? "bg-accent w-12"
-                    : "bg-muted group-hover:bg-foreground w-6 group-hover:w-8"
+                    ? "bg-accent w-10"
+                    : "bg-muted group-hover:bg-foreground w-4 group-hover:w-8"
                 }`}
               />
             </button>

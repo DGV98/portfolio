@@ -11,17 +11,17 @@ import { publications } from "@/data/publications";
 export default function Home() {
   return (
     <div>
-      <div className="flex h-screen flex-col lg:flex-row">
+      <div className="flex h-screen flex-col xl:flex-row">
         {/* Sidebar */}
-        <div className="border-border shrink-0 border-b lg:fixed lg:flex lg:h-screen lg:w-1/4 lg:border-r lg:border-b-0">
+        <div className="border-border shrink-0 border-b xl:fixed xl:flex xl:h-screen xl:w-1/4 xl:border-r xl:border-b-0">
           <ProfileSection profile={profile} />
         </div>
 
         {/* Main content */}
-        <main className="flex-1 lg:ml-[25%] lg:h-screen lg:snap-y lg:snap-mandatory lg:overflow-y-auto lg:pr-40">
+        <main className="flex-1 xl:ml-[25%] xl:h-screen xl:snap-y xl:snap-mandatory xl:overflow-y-auto xl:pr-40">
           <section
             id="experience"
-            className="flex items-center justify-center px-6 py-8 sm:px-10 lg:min-h-screen lg:snap-center lg:py-16"
+            className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:px-10 xl:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <ExperienceSection entries={experience} />
@@ -30,7 +30,7 @@ export default function Home() {
 
           <section
             id="projects"
-            className="flex items-center justify-center px-6 py-8 sm:px-10 lg:min-h-screen lg:snap-center lg:py-16"
+            className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:px-10 xl:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <ProjectsSection projects={projects} />
@@ -39,7 +39,7 @@ export default function Home() {
 
           <section
             id="publications"
-            className="flex items-center justify-center px-6 py-8 sm:px-10 lg:min-h-screen lg:snap-center lg:py-16"
+            className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:px-10 xl:py-16"
           >
             <div className="mx-auto w-full max-w-3xl">
               <PublicationsSection publications={publications} />

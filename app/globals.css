@@ -5,6 +5,7 @@
   --foreground: #ededed;
   --accent: #60a5fa;
   --muted: #a1a1aa;
+  --banner: #e9e9ed;
   --card: #18181b;
   --card-hover: #1f1f23;
   --border: #27272a;
@@ -16,6 +17,7 @@
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-card: var(--card);
+  --color-banner: var(--banner);
   --color-card-hover: var(--card-hover);
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);

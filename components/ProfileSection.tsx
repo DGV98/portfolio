@@ -5,16 +5,16 @@ import Banner from "./Banner";
 
 export function ProfileSection({ profile }: { profile: Profile }) {
   return (
-    <aside className="flex flex-col items-center gap-6 p-8 text-center lg:items-start lg:text-left">
+    <aside className="flex flex-col items-center gap-6 p-8 text-center xl:items-start xl:text-left">
       <Banner />
       <ProfilePicture />
 
       <div className="space-y-2">
         <h1 className="text-foreground text-2xl font-bold">{profile.name}</h1>
-        <p className="text-accent text-sm font-semibold lg:text-base">
+        <p className="text-accent text-sm font-semibold xl:text-base">
           {profile.title}
         </p>
-        <p className="text-muted text-sm font-semibold lg:text-base">
+        <p className="text-muted text-sm font-semibold xl:text-base">
           {profile.location}
         </p>
       </div>
@@ -59,7 +59,7 @@ export function ProfileSection({ profile }: { profile: Profile }) {
 //             Chicago, IL • B.S. Molecular Engineering (Quantum)
 //           </div>
 
-//           <p className="text-slate-300 leading-relaxed max-w-2xl text-lg">
+//           <p className="text-slate-300 leading-relaxed max-w-2xl text-xl">
 //             Hi, I am a self-taught software engineer with a passion for{" "}
 //             <span className="text-white font-medium">quantum computation</span>{" "}
 //             and the computers of tomorrow. I bridge the gap between classical
