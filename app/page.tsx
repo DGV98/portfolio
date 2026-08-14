@@ -8,18 +8,19 @@ import { profile } from "@/data/profile";
 import { experience } from "@/data/experience";
 import { projects } from "@/data/projects";
 import { publications } from "@/data/publications";
-// import { useState, useEffect } from "react";
-// import { loadPosts } from "./[slug]/actions";
+import { useState, useEffect } from "react";
+import { loadPosts } from "./actions";
+import { BlogSection } from "@/components/BlogSection";
 
 export default function Home() {
-  // const [posts, setPosts] = useState([""]);
-  // useEffect(() => {
-  //   const getAllData = async () => {
-  //     const data = await loadPosts();
-  //     setPosts(data);
-  //   };
-  //   getAllData();
-  // }, []);
+  const [posts, setPosts] = useState([""]);
+  useEffect(() => {
+    const getAllData = async () => {
+      const data = await loadPosts();
+      setPosts(data);
+    };
+    getAllData();
+  }, []);
   return (
     <div>
       <div className="flex h-screen flex-col xl:flex-row">
@@ -61,7 +62,7 @@ export default function Home() {
             className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:py-16"
           >
             <div className="w-full max-w-4xl">
-              <PublicationsSection publications={publications} />
+              {/* <BlogSection posts={posts} /> */}
             </div>
           </section>
         </main>

@@ -4,6 +4,16 @@ export interface SocialLink {
   icon: string;
 }
 
+export interface BlogPost {
+  title: string;
+  publishDate: string;
+  isPublished: boolean;
+}
+
+export interface BlogPosts {
+  posts: [BlogPost];
+}
+
 export interface Profile {
   name: string;
   title: string;

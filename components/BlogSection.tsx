@@ -1,18 +1,10 @@
 "use client";
 
 import { SectionHeading } from "./SectionHeading";
-import { useEffect, useState } from "react";
-import { loadPosts } from "@/app/[slug]/actions";
+import BlogRow from "./BlogRow";
+import { BlogPosts } from "@/types";
 
-export function BlogSection() {
-  const [posts, setPosts] = useState([""]);
-  useEffect(() => {
-    const getAllData = async () => {
-      const data = await loadPosts();
-      setPosts(data);
-    };
-    getAllData();
-  }, []);
+export function BlogSection({ posts }: BlogPosts) {
   return (
     <section>
       <SectionHeading>Blog</SectionHeading>
@@ -21,9 +13,9 @@ export function BlogSection() {
         <p className="col-span-1 px-2">PUBLISHED</p>
         <div className="col-span-1"></div>
       </div>
-      {/* {posts.map((pub, i) => (
-        <BlogRow key={i} pub={pub} />
-      ))} */}
+      {posts.map((post, i) => (
+        <BlogRow post={post} key={i} />
+      ))}
     </section>
   );
 }

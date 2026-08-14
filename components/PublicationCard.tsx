@@ -1,13 +1,13 @@
 "use client";
 
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
 import { PublicationEntry } from "@/types";
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+// const cardVariants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: { opacity: 1, y: 0 },
+// };
 
 export function PublicationCard({ pub }: { pub: PublicationEntry }) {
   return (
