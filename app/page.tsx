@@ -13,12 +13,12 @@ export default function Home() {
     <div>
       <div className="flex h-screen flex-col xl:flex-row">
         {/* Sidebar */}
-        <div className="border-border shrink-0 border-b xl:fixed xl:flex xl:h-screen xl:w-1/4 xl:border-r xl:border-b-0">
+        <div className="border-border shrink-0 border-b xl:sticky xl:top-0 xl:flex xl:h-screen xl:w-1/4 xl:border-r xl:border-b-0">
           <ProfileSection profile={profile} />
         </div>
 
         {/* Main content */}
-        <main className="flex-1 xl:ml-[25%] xl:h-screen xl:snap-y xl:snap-mandatory xl:overflow-y-auto xl:pr-40">
+        <main className="flex-1 xl:h-screen xl:snap-y xl:snap-mandatory xl:overflow-y-auto xl:pr-40">
           <section
             id="experience"
             className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:px-10 xl:py-16"
