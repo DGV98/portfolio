@@ -1,3 +1,4 @@
+"use client";
 import { ProfileSection } from "@/components/ProfileSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
@@ -7,8 +8,18 @@ import { profile } from "@/data/profile";
 import { experience } from "@/data/experience";
 import { projects } from "@/data/projects";
 import { publications } from "@/data/publications";
+// import { useState, useEffect } from "react";
+// import { loadPosts } from "./[slug]/actions";
 
 export default function Home() {
+  // const [posts, setPosts] = useState([""]);
+  // useEffect(() => {
+  //   const getAllData = async () => {
+  //     const data = await loadPosts();
+  //     setPosts(data);
+  //   };
+  //   getAllData();
+  // }, []);
   return (
     <div>
       <div className="flex h-screen flex-col xl:flex-row">
@@ -23,7 +34,7 @@ export default function Home() {
             id="experience"
             className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:px-10 xl:py-16"
           >
-            <div className="mx-auto w-full max-w-3xl">
+            <div className="mx-auto w-full max-w-4xl">
               <ExperienceSection entries={experience} />
             </div>
           </section>
@@ -32,7 +43,7 @@ export default function Home() {
             id="projects"
             className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:px-10 xl:py-16"
           >
-            <div className="mx-auto w-full max-w-3xl">
+            <div className="mx-auto w-full max-w-4xl">
               <ProjectsSection projects={projects} />
             </div>
           </section>
@@ -41,7 +52,15 @@ export default function Home() {
             id="publications"
             className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:py-16"
           >
-            <div className="w-full max-w-3xl">
+            <div className="w-full max-w-4xl">
+              <PublicationsSection publications={publications} />
+            </div>
+          </section>
+          <section
+            id="blog"
+            className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:py-16"
+          >
+            <div className="w-full max-w-4xl">
               <PublicationsSection publications={publications} />
             </div>
           </section>

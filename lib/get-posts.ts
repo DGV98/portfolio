@@ -1,30 +1,11 @@
-// TODO: Do this with frontmatter, it is just parsing the metadata with a regex
+import { readdir } from "fs/promises";
+import path from "path";
 
-// function extractMetadata(source: string) {
-//     const match = source.match(/export const metadata = ({[\s\S]*?});/);
-//     if (!match) return null;
-//     try {
-//         return new Function(`return ${match[1]}`)();
-//     } catch (err) {
-//         console.error("Failed to parse metadata: ", err);
-//         return null;
-//     }
-// };
+export async function getPosts() {
+  const dir = path.join(process.cwd(), "posts");
+  const files = await readdir(dir);
 
-// export async function getAllPosts() {
-//     const files = await fs.readdir(postsDir)
-
-//     const posts = await Promist.all(
-//         files
-//             .filter((file) => file.endsWith(".mdx"))
-//             .map(async (filename) => {
-//                 const source = await fs.readFile(filePath, "utf8")
-//                 const metadata = extractMetadata(source)
-//                 return {
-//                     slug: path.basename(filename, ".mdx"),
-//                     metadata
-//                 }
-//             })
-//     )
-//     return posts.filter((post) => post.metadata)
-// }
+  return files
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => file.replace(/\.mdx$/, ""));
+}

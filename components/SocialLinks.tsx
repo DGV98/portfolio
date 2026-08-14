@@ -30,7 +30,6 @@ export function SocialLinks({ links }: { links: SocialLink[] }) {
           );
         })}
       </div>
-      <BlogLink />
     </div>
   );
 }

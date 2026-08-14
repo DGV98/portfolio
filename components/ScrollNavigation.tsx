@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BlogLink from "./BlogLink";
 
 const sections = [
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "publications", label: "Publications" },
+  { id: "blog", label: "Blog" },
 ];
 
 export function ScrollNavigation() {
@@ -36,7 +36,8 @@ export function ScrollNavigation() {
     return () => {
       observers.forEach((observer) => observer?.disconnect());
     };
-  }, [sections]);
+  }, []);
+  // }, [sections]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
