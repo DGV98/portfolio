@@ -1,12 +1,10 @@
 import Link from "next/link";
 
-// TODO: Banner for blogs
 const Banner = () => {
   return (
-    <div className="font-terminal flex flex-col text-right text-3xl font-bold xl:text-4xl 2xl:text-5xl">
-      <Link href="/" className="text-banner">
-        <p className="font-terminal text-banner">hellodavid</p>
-        <p className="font-terminal text-accent">.dev</p>
+    <div className="font-geist flex flex-col text-right text-4xl font-bold 2xl:text-5xl">
+      <Link href="/" className="font-geist text-banner cursor-pointer">
+        hellodavid<span className="text-accent">.dev</span>
       </Link>
     </div>
   );
