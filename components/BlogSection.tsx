@@ -2,7 +2,11 @@
 
 import { SectionHeading } from "./SectionHeading";
 import BlogRow from "./BlogRow";
-import { BlogPosts } from "@/types";
+import { BlogPost } from "@/types";
+
+interface BlogPosts {
+  posts: BlogPost[];
+}
 
 export function BlogSection({ posts }: BlogPosts) {
   return (

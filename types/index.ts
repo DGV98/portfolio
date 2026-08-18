@@ -10,10 +10,6 @@ export interface BlogPost {
   isPublished: boolean;
 }
 
-export interface BlogPosts {
-  posts: [BlogPost];
-}
-
 export interface Profile {
   name: string;
   title: string;

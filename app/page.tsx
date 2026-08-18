@@ -11,9 +11,10 @@ import { publications } from "@/data/publications";
 import { useState, useEffect } from "react";
 import { loadPosts } from "./actions";
 import { BlogSection } from "@/components/BlogSection";
+import { BlogPost } from "@/types";
 
 export default function Home() {
-  const [posts, setPosts] = useState([""]);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   useEffect(() => {
     const getAllData = async () => {
       const data = await loadPosts();
@@ -62,7 +63,7 @@ export default function Home() {
             className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:py-16"
           >
             <div className="w-full max-w-4xl">
-              <BlogSection posts={posts} />
+              {posts && <BlogSection posts={posts} />}
             </div>
           </section>
         </main>
