@@ -15,6 +15,7 @@ export function useMDXComponents(
         {...props}
       />
     ),
+    a: (props) => <a className="text-accent underline" {...props} />,
     ...components,
   };
 }
