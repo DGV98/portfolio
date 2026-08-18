@@ -6,17 +6,15 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   try {
     const post = await import(`@/posts/${slug}.mdx`);
     const { default: Content, metadata } = post;
-    const today = new Date();
-    return metadata.published && new Date(metadata.publishDate) <= today ? (
-      <article className="mt-4 flex flex-col items-center justify-center">
-        <div className="space-y-4">
-          <h1>{metadata.title}</h1>
-          <div>{metadata.publishDate}</div>
-        </div>
-        <Content />
-      </article>
-    ) : (
-      <h1>Not Published</h1>
+    return (
+      metadata.isPublished && (
+        <article className="mt-4 flex flex-col items-center justify-center text-left">
+          <Banner />
+          <div className="max-w-4xl px-8">
+            <Content />
+          </div>
+        </article>
+      )
     );
   } catch {
     notFound();

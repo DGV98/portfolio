@@ -5,7 +5,7 @@ const BlogRow = ({ post }: { post: BlogPost }) => {
   return (
     post.isPublished && (
       <Link
-        className="border-border font-inter hover:bg-card-hover grid grid-cols-11 border-b-2 px-2 py-4"
+        className="border-border font-inter hover:bg-card-hover grid grid-cols-11 border-b-2 py-2"
         href={post.slug}
       >
         <div className="hidden lg:col-span-2 lg:flex lg:items-center">
@@ -14,7 +14,7 @@ const BlogRow = ({ post }: { post: BlogPost }) => {
           </h2>
         </div>
 
-        <div className="col-span-11 flex flex-col justify-center lg:col-span-9">
+        <div className="col-span-11 flex flex-col justify-center gap-2 lg:col-span-9">
           <h2 className="text-lg font-bold xl:text-2xl">{post.title}</h2>
           {post.description && (
             <p className="text-muted text-xs xl:text-sm">{post.description}</p>

@@ -5,7 +5,7 @@ import Banner from "./Banner";
 
 export function ProfileSection({ profile }: { profile: Profile }) {
   return (
-    <aside className="flex flex-col items-center gap-4 p-4 text-center xl:items-start xl:text-left">
+    <aside className="flex flex-col items-center gap-4 p-4 text-center">
       <Banner />
       <div className="flex flex-col items-center gap-4 p-4 text-center xl:-mt-12 xl:flex xl:h-full xl:flex-col xl:items-center xl:justify-center xl:gap-6 xl:text-center">
         <ProfilePicture />

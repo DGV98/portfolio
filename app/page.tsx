@@ -33,7 +33,15 @@ export default function Home() {
         </div>
 
         {/* Main content */}
-        <main className="flex-1 xl:h-screen xl:snap-y xl:snap-mandatory xl:overflow-y-hidden xl:pr-40">
+        <main className="flex-1 xl:h-screen xl:snap-y xl:snap-mandatory xl:overflow-y-auto xl:pr-40">
+          <section
+            id="blog"
+            className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:py-16"
+          >
+            <div className="w-full max-w-4xl">
+              {posts && <BlogSection posts={posts} />}
+            </div>
+          </section>
           <section
             id="experience"
             className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:px-10 xl:py-16"
@@ -58,14 +66,6 @@ export default function Home() {
           >
             <div className="w-full max-w-4xl">
               <PublicationsSection publications={publications} />
-            </div>
-          </section>
-          <section
-            id="blog"
-            className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:py-16"
-          >
-            <div className="w-full max-w-4xl">
-              {posts && <BlogSection posts={posts} />}
             </div>
           </section>
         </main>
