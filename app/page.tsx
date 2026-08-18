@@ -62,7 +62,7 @@ export default function Home() {
             className="flex items-center justify-center px-6 py-8 xl:min-h-screen xl:snap-center xl:py-16"
           >
             <div className="w-full max-w-4xl">
-              {/* <BlogSection posts={posts} /> */}
+              <BlogSection posts={posts} />
             </div>
           </section>
         </main>
