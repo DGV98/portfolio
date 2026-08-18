@@ -13,6 +13,8 @@ import { loadPosts } from "./actions";
 import { BlogSection } from "@/components/BlogSection";
 import { BlogPost } from "@/types";
 
+// TODO: Fix scrolling on mobile views
+
 export default function Home() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   useEffect(() => {
