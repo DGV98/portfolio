@@ -12,14 +12,18 @@ import { PublicationEntry } from "@/types";
 export function PublicationCard({ pub }: { pub: PublicationEntry }) {
   return (
     <div className="border-border grid grid-cols-11 gap-1 border-b-2 py-4">
-      <p className="text-muted col-span-1 text-sm">{pub.year}</p>
-      <div className="col-span-7 flex flex-col gap-1 text-left">
+      <p className="text-muted col-span-1 hidden text-sm lg:block">
+        {pub.year}
+      </p>
+      <div className="col-span-10 flex flex-col gap-1 text-left lg:col-span-7">
         <h3 className="text-foreground text-sm leading-snug font-semibold">
           {pub.title}
         </h3>
         <p className="text-muted text-sm">{pub.authors}</p>
       </div>
-      <p className="text-muted col-span-2 px-2 text-sm">{pub.journal}</p>
+      <p className="text-muted col-span-2 hidden px-2 text-sm lg:block">
+        {pub.journal}
+      </p>
       {pub.url && (
         <a
           href={pub.url}
