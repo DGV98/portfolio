@@ -8,6 +8,8 @@ export interface BlogPost {
   title: string;
   publishDate: string;
   isPublished: boolean;
+  slug: string;
+  description?: string;
 }
 
 export interface Profile {
