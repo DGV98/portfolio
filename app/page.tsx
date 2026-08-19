@@ -13,8 +13,6 @@ import { loadPosts } from "./actions";
 import { BlogSection } from "@/components/BlogSection";
 import { BlogPost } from "@/types";
 
-// TODO: Fix scrolling on mobile views
-
 export default function Home() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   useEffect(() => {
@@ -26,7 +24,7 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <div className="flex h-screen flex-col xl:flex-row">
+      <div className="flex flex-col xl:h-screen xl:flex-row">
         {/* Sidebar */}
         <div className="border-border shrink-0 border-b xl:sticky xl:top-0 xl:flex xl:h-screen xl:w-1/4 xl:border-r xl:border-b-0">
           <ProfileSection profile={profile} />
