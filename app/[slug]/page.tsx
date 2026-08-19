@@ -8,7 +8,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { default: Content, metadata } = post;
     return (
       metadata.isPublished && (
-        <article className="mt-4 flex flex-col items-center justify-center text-left">
+        <article className="mt-8 mb-16 flex flex-col items-center justify-center text-left">
           <Banner />
           <div className="max-w-4xl px-8">
             <Content />
