@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 
-interface ScrollNavigationProps {
-  sections: Array<{
-    id: string;
-    label: string;
-  }>;
-}
+const sections = [
+  { id: "blog", label: "Blog" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "publications", label: "Publications" },
+];
 
-export function ScrollNavigation({ sections }: ScrollNavigationProps) {
+export function ScrollNavigation() {
   const [activeSection, setActiveSection] = useState(sections[0]?.id || "");
 
   useEffect(() => {
@@ -36,7 +36,8 @@ export function ScrollNavigation({ sections }: ScrollNavigationProps) {
     return () => {
       observers.forEach((observer) => observer?.disconnect());
     };
-  }, [sections]);
+  }, []);
+  // }, [sections]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -49,20 +50,22 @@ export function ScrollNavigation({ sections }: ScrollNavigationProps) {
   };
 
   return (
-    <nav className="fixed right-8 top-1/2 z-50 hidden -translate-y-1/2 lg:block">
+    <nav className="fixed top-1/2 right-8 z-50 hidden -translate-y-1/2 xl:block">
       <ul className="flex flex-col items-end gap-4">
         {sections.map((section) => (
           <li key={section.id}>
             <button
               onClick={() => scrollToSection(section.id)}
-              className="group relative flex items-center justify-end"
+              className="group flex items-center justify-end"
               aria-label={`Navigate to ${section.label}`}
             >
               <span
-                className={`absolute right-full mr-3 whitespace-nowrap text-xs font-medium transition-all duration-300 ${
+                className={`mr-3 text-xs font-medium whitespace-nowrap transition-all duration-300 ${
                   activeSection === section.id
-                    ? "translate-x-0 opacity-100 text-foreground"
-                    : "translate-x-2 opacity-0 text-muted group-hover:translate-x-0 group-hover:opacity-100"
+                    ? "text-foreground translate-x-0 opacity-100"
+                    : "text-muted translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                  // ? "text-foreground translate-x-0"
+                  // : "text-muted translate-x-2 group-hover:translate-x-0"
                 }`}
               >
                 {section.label}
@@ -70,8 +73,8 @@ export function ScrollNavigation({ sections }: ScrollNavigationProps) {
               <span
                 className={`block h-2 rounded-full transition-all duration-300 ${
                   activeSection === section.id
-                    ? "w-12 bg-accent"
-                    : "w-6 bg-muted group-hover:w-8 group-hover:bg-foreground"
+                    ? "bg-accent w-10"
+                    : "bg-muted group-hover:bg-foreground w-4 group-hover:w-8"
                 }`}
               />
             </button>

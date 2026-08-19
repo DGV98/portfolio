@@ -4,6 +4,14 @@ export interface SocialLink {
   icon: string;
 }
 
+export interface BlogPost {
+  title: string;
+  publishDate: string;
+  isPublished: boolean;
+  slug: string;
+  description?: string;
+}
+
 export interface Profile {
   name: string;
   title: string;
@@ -35,7 +43,7 @@ export interface ProjectEntry {
 export interface PublicationEntry {
   title: string;
   authors: string;
-  venue: string;
+  journal: string;
   year: number;
   url?: string;
 }

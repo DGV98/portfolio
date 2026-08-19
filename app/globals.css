@@ -5,6 +5,7 @@
   --foreground: #ededed;
   --accent: #60a5fa;
   --muted: #a1a1aa;
+  --banner: #e9e9ed;
   --card: #18181b;
   --card-hover: #1f1f23;
   --border: #27272a;
@@ -16,45 +17,26 @@
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-card: var(--card);
+  --color-banner: var(--banner);
   --color-card-hover: var(--card-hover);
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-terminal: var(--font-jetbrains-mono);
+  --font-inter: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-* {
+/* * {
   scrollbar-width: none;
-}
+} */
 
 *::-webkit-scrollbar {
   display: none;
-}
-
-/* Mandatory scroll snap behavior */
-.snap-always {
-  scroll-snap-stop: always;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.5;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-section {
-  animation: appear ease-out;
-  animation-timeline: view();
-  animation-range: entry 0% entry 50%;
 }

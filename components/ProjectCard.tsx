@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ExternalLink, Github } from "lucide-react";
 import { ProjectEntry } from "@/types";
 
@@ -21,25 +21,25 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
       variants={cardVariants}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={`flex flex-col justify-between rounded-xl border border-border bg-card p-5 transition-colors hover:bg-card-hover ${
+      className={`border-border bg-card hover:bg-card-hover flex flex-col justify-between rounded-xl border p-4 transition-colors ${
         priorities[project.priority]
       }`}
     >
       <div>
-        <h3 className="mb-2 text-sm font-semibold text-foreground">
+        <h3 className="text-foreground mb-2 text-sm font-semibold">
           {project.title}
         </h3>
-        <p className="mb-4 text-sm leading-relaxed text-muted">
+        <p className="text-muted mb-2 text-sm leading-relaxed">
           {project.description}
         </p>
       </div>
 
       <div className="flex items-end justify-between">
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-1">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent"
+              className="bg-accent/10 text-accent rounded-full px-2 py-0.5 text-xs font-medium"
             >
               {tag}
             </span>
@@ -53,7 +53,7 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Source code"
-              className="text-muted transition-colors hover:text-foreground"
+              className="text-muted hover:text-foreground transition-colors"
             >
               <Github className="h-4 w-4" />
             </a>
@@ -64,7 +64,7 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Live demo"
-              className="text-muted transition-colors hover:text-foreground"
+              className="text-muted hover:text-foreground transition-colors"
             >
               <ExternalLink className="h-4 w-4" />
             </a>

@@ -1,33 +1,30 @@
 import { Profile } from "@/types";
-import Image from "next/image";
-import { SocialLinks } from "./social-links";
+import { SocialLinks } from "./SocialLinks";
+import ProfilePicture from "./ProfilePicture";
+import Banner from "./Banner";
 
-export function Sidebar({ profile }: { profile: Profile }) {
+export function ProfileSection({ profile }: { profile: Profile }) {
   return (
-    <aside className="flex flex-col items-center gap-6 px-8 py-12 text-center lg:justify-self-center">
-      {/* Placeholder avatar */}
-      <Image
-        src="/profile.png"
-        alt="Picture of the author"
-        width={500}
-        height={500}
-      />
+    <aside className="flex flex-col items-center gap-4 p-4 text-center">
+      <Banner />
+      <div className="xl:-pt-12 flex flex-col items-center gap-4 p-4 text-center xl:flex xl:h-full xl:flex-col xl:items-center xl:justify-center xl:gap-6 xl:text-center">
+        <ProfilePicture />
 
-      <div className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight text-foreground">
-          {profile.name}
-        </h1>
-        <p className="text-md font-medium text-accent">{profile.title}</p>
-        <p className="text-sm text-muted tracking-widest font-semibold">
-          {profile.location} • {profile.degree}
+        <div className="space-y-2">
+          <h1 className="text-foreground text-2xl font-bold">{profile.name}</h1>
+          <p className="text-accent text-sm font-semibold xl:text-base">
+            {profile.title}
+          </p>
+          <p className="text-muted text-sm font-semibold xl:text-base">
+            {profile.location}
+          </p>
+        </div>
+        <p className="text-muted max-w-sm text-sm leading-relaxed">
+          {profile.bio}
         </p>
+
+        <SocialLinks links={profile.socialLinks} />
       </div>
-
-      <p className="max-w-sm text-md leading-relaxed text-muted">
-        {profile.bio}
-      </p>
-
-      <SocialLinks links={profile.socialLinks} />
     </aside>
   );
 }
@@ -64,7 +61,7 @@ export function Sidebar({ profile }: { profile: Profile }) {
 //             Chicago, IL • B.S. Molecular Engineering (Quantum)
 //           </div>
 
-//           <p className="text-slate-300 leading-relaxed max-w-2xl text-lg">
+//           <p className="text-slate-300 leading-relaxed max-w-2xl text-xl">
 //             Hi, I am a self-taught software engineer with a passion for{" "}
 //             <span className="text-white font-medium">quantum computation</span>{" "}
 //             and the computers of tomorrow. I bridge the gap between classical
