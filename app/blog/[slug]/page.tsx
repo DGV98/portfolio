@@ -1,3 +1,4 @@
+import ArticleNav from "@/components/ArticleNav";
 import Banner from "@/components/Banner";
 import { notFound } from "next/navigation";
 
@@ -10,6 +11,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       metadata.isPublished && (
         <article className="mt-8 mb-16 flex flex-col items-center justify-center text-left">
           <Banner />
+          <ArticleNav slug={slug} />
           <div className="w-full max-w-4xl px-8">
             <Content />
           </div>

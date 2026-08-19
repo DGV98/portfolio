@@ -1,20 +1,9 @@
-"use client";
-
-import { BlogPost } from "@/types";
-import { useState, useEffect } from "react";
-import { loadPosts } from "./actions";
 import { BlogSection } from "@/components/BlogSection";
 import Banner from "@/components/Banner";
+import { getPosts } from "@/lib/get-posts";
 
-const page = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  useEffect(() => {
-    const getAllData = async () => {
-      const data = await loadPosts();
-      setPosts(data);
-    };
-    getAllData();
-  }, []);
+const page = async () => {
+  const posts = await getPosts();
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8">
       <Banner />

@@ -2,7 +2,7 @@ import { BlogPost } from "@/types";
 import { readdir } from "fs/promises";
 import path from "path";
 
-export async function getPosts() {
+export async function getPosts(): Promise<BlogPost[]> {
   const dir = path.join(process.cwd(), "posts");
   const files = await readdir(dir);
   const postMetadata: BlogPost[] = [];
@@ -15,6 +15,7 @@ export async function getPosts() {
       continue;
     }
   }
+  postMetadata.sort((a, b) => a.title.localeCompare(b.title));
   return postMetadata;
   // return files
   //   .filter((file) => file.endsWith(".mdx"))

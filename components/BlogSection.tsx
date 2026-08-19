@@ -1,10 +1,8 @@
 "use client";
 
-import { SectionHeading } from "./SectionHeading";
 import BlogRow from "./BlogRow";
 import { BlogPost } from "@/types";
 import { BlogHeading } from "./BlogHeading";
-import Banner from "./Banner";
 
 interface BlogPosts {
   posts: BlogPost[];
