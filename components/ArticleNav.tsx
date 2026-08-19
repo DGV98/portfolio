@@ -6,8 +6,8 @@ import { profile } from "@/data/profile";
 const ArticleNav = async ({ slug }: { slug: string }) => {
   const posts = await getPosts();
   return (
-    <div>
-      <ul>
+    <div className="flex flex-col gap-2">
+      <ul className="border-border border-b-2">
         {posts.map(
           (post, i) =>
             post.slug !== slug && (

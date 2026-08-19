@@ -12,7 +12,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export function SocialLinks({ links }: { links: SocialLink[] }) {
   return (
-    <div className="flex gap-3">
+    <div className="flex items-center gap-6">
       <div className="flex gap-6">
         {links.map((link) => {
           const Icon = iconMap[link.icon];
