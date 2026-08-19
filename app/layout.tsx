@@ -138,8 +138,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
-        <SpeedInsights />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
