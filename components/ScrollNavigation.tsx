@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 
 const sections = [
-  { id: "blog", label: "Blog" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "publications", label: "Publications" },

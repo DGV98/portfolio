@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail, Twitter, GraduationCap } from "lucide-react";
 import { SocialLink } from "@/types";
-import BlogLink from "./BlogLink";
+import BlogLink from "@/components/BlogLink";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   github: Github,
@@ -30,6 +30,7 @@ export function SocialLinks({ links }: { links: SocialLink[] }) {
           );
         })}
       </div>
+      <BlogLink />
     </div>
   );
 }
