@@ -5,7 +5,7 @@ const BlogRow = ({ post }: { post: BlogPost }) => {
   return (
     post.isPublished && (
       <Link
-        className="border-border hover:bg-card-hover flex flex-col gap-2 border-b-2 py-4"
+        className="border-border hover:bg-card-hover flex flex-col gap-2 rounded-xl border-b-2 p-4"
         href={`/blog/${post.slug}`}
       >
         <div className="flex justify-between">
