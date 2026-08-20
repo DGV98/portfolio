@@ -8,7 +8,7 @@ const ArticleNav = async ({ slug }: { slug: string }) => {
   const slice = posts.length > 10 ? 10 : posts.length;
   return (
     <div className="flex flex-col">
-      <h2 className="text-2xl font-semibold">Recent</h2>
+      <h2 className="text-2xl font-bold">Recent</h2>
       <ul className="border-border mb-2 border-b-2">
         {posts.slice(0, slice).map(
           (post, i) =>

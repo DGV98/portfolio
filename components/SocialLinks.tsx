@@ -23,7 +23,7 @@ export function SocialLinks({ links }: { links: SocialLink[] }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.name}
-              className="text-muted hover:bg-card hover:text-foreground rounded-lg py-2 transition-colors"
+              className="text-muted hover:text-foreground rounded-lg py-2 transition-colors"
             >
               {Icon && <Icon className="h-5 w-5" />}
             </a>

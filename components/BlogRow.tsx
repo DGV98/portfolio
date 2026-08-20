@@ -10,7 +10,7 @@ const BlogRow = ({ post }: { post: BlogPost }) => {
       >
         <div className="flex justify-between">
           <h2 className="text-xl font-bold lg:text-2xl">{post.title}</h2>
-          <h2 className="text-sm lg:text-base">{post.publishDate}</h2>
+          <span className="text-sm lg:text-base">{post.publishDate}</span>
         </div>
         {post.description && (
           <p className="text-muted text-sm lg:text-base">{post.description}</p>

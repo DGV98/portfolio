@@ -4,8 +4,12 @@ export function useMDXComponents(
   components: MDXComponents = {},
 ): MDXComponents {
   return {
-    h1: (props) => <h1 className="mt-10 text-4xl font-bold" {...props} />,
-    h2: (props) => <h2 className="mt-8 text-xl font-bold" {...props} />,
+    h1: (props) => (
+      <h1 className="mt-10 text-2xl font-bold lg:text-4xl" {...props} />
+    ),
+    h2: (props) => (
+      <h2 className="mt-8 text-lg font-bold lg:text-2xl" {...props} />
+    ),
     p: (props) => (
       <p className="py-2 text-left text-base leading-loose" {...props} />
     ),
