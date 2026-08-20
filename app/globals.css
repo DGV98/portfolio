@@ -34,12 +34,12 @@ body {
   /* overflow: hidden; */
 }
 
-pre {
+/* pre {
   overflow-x: auto;
 }
 pre code {
   white-space: pre;
-}
+} */
 
 /* * {
   scrollbar-width: none;

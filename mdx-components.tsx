@@ -9,9 +9,9 @@ export function useMDXComponents(
     p: (props) => (
       <p className="py-2 text-left text-base leading-loose" {...props} />
     ),
-    code: (props) => (
-      <code
-        className="rounded bg-zinc-100 px-1.5 py-0.5 dark:bg-zinc-800"
+    pre: (props) => (
+      <pre
+        className="mb-2 block max-w-full overflow-x-auto rounded-2xl border-l-2 border-[#f36d33] bg-[#f4f4f4] p-2 font-mono wrap-break-word text-[#666]"
         {...props}
       />
     ),

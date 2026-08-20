@@ -9,13 +9,17 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { default: Content, metadata } = post;
     return (
       metadata.isPublished && (
-        <article className="mt-8 mb-16 flex flex-col items-center justify-center text-left">
+        <div className="mt-8 flex flex-col items-center gap-4 lg:gap-8">
           <Banner />
-          <ArticleNav slug={slug} />
-          <div className="w-full max-w-4xl px-8">
-            <Content />
-          </div>
-        </article>
+          <article className="mb-4 flex w-full flex-col lg:flex-row lg:justify-around lg:gap-4">
+            <div className="w-full max-w-3xl px-8 text-left">
+              <Content />
+            </div>
+            <div className="flex w-auto p-8 lg:sticky lg:top-0 lg:h-screen lg:justify-center">
+              <ArticleNav slug={slug} />
+            </div>
+          </article>
+        </div>
       )
     );
   } catch {
