@@ -7,7 +7,7 @@ export function ProfileSection({ profile }: { profile: Profile }) {
   return (
     <aside className="flex flex-col items-center gap-4 p-4 text-center">
       <Banner />
-      <div className="xl:-pt-12 flex flex-col items-center gap-4 p-4 text-center xl:flex xl:h-full xl:flex-col xl:items-center xl:justify-center xl:gap-6 xl:text-center">
+      <div className="flex flex-col items-center gap-4 p-4 text-center xl:flex xl:h-full xl:flex-col xl:items-center xl:justify-center xl:gap-6 xl:text-center">
         <ProfilePicture />
 
         <div className="space-y-2">

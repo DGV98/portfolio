@@ -4,14 +4,18 @@ export function useMDXComponents(
   components: MDXComponents = {},
 ): MDXComponents {
   return {
-    h1: (props) => <h1 className="mt-10 text-4xl font-bold" {...props} />,
-    h2: (props) => <h2 className="mt-8 text-xl font-bold" {...props} />,
+    h1: (props) => (
+      <h1 className="mt-10 text-2xl font-bold lg:text-4xl" {...props} />
+    ),
+    h2: (props) => (
+      <h2 className="mt-8 text-lg font-bold lg:text-2xl" {...props} />
+    ),
     p: (props) => (
       <p className="py-2 text-left text-base leading-loose" {...props} />
     ),
-    code: (props) => (
-      <code
-        className="rounded bg-zinc-100 px-1.5 py-0.5 dark:bg-zinc-800"
+    pre: (props) => (
+      <pre
+        className="mb-2 block max-w-full overflow-x-auto rounded-2xl border-l-2 border-[#f36d33] bg-[#f4f4f4] p-2 font-mono wrap-break-word text-[#666]"
         {...props}
       />
     ),

@@ -10,15 +10,13 @@ const BlogLink = () => {
     router.push("/blog");
   };
   return (
-    <div className="border-border group border-l-2 px-2">
+    <div className="group">
       <button
         onClick={goToBlog}
-        className="border-accent group-hover:border-foreground flex cursor-pointer items-center gap-2 rounded-lg border-2 px-2 py-1"
+        className="border-accent text-accent group-hover:border-foreground group-hover:text-foreground flex cursor-pointer items-center gap-2 rounded-lg border-2 px-2 py-1 text-sm"
       >
-        <h1 className="text-accent group-hover:text-foreground text-sm">
-          Blog
-        </h1>
-        <ExternalLink className="text-accent group-hover:text-foreground h-4 w-4" />
+        Blog
+        <ExternalLink className="h-4 w-4" />
       </button>
     </div>
   );
