@@ -1,0 +1,45 @@
+export const metadata = {
+  title: "Slop",
+  publishDate: "August 30, 2026",
+  isPublished: true,
+  slug: "slop",
+  description: "What do I mean by AI slop"
+};
+
+# Slop
+
+Everyone uses the term "AI Slop" to refer to the regurgitation of code that 
+an LLM spits out whenever it is prompted to create another project that will surely end up forgotten about in a Github repo.
+This had always puzzled me. I was always on the side of "well if it works, does it really matter?"
+I did not understand what it meant to write maintainable code, nor the hours of
+debugging that could have been saved had I just read the documentation.
+
+## Changed Perspective
+
+While I was making this portfolio site, I used Opus 4.6 heavily to display my
+experience and projects neatly for any recruiter that may stumble onto this site
+([open to work btw](/) 😁). At the time, I was starting my role as a Software 
+Developer maintaining a 30+ year old code base. I started to see patterns in the 
+decisions that people made over the years, old breadcrumbs left by retired developers.
+This is the type of codebase where the version control system is the comments left behind
+when making a 1 line change. Unfortunately, it was evident that this system had not
+been written with the considerations layed out in [Clean Code](https://en.wikipedia.org/wiki/Robert_C._Martin), the book 
+had not even been written yet. This codebase violates most if not all the principles:
+
+- KISS - Parts of programs were abstracted out into subroutines that are then copied into the same program.
+- DRY - 50% of the files have duplicates with unmaintained code, with a header at the top pointing you to the maintained version 
+- SRP - Subroutines have multiple responsibilities, making it almost impossible to determine the output without a debugger
+- ... and more
+
+Working through this legacy system, I realized that working with AI is quite similar.
+Whenever I would start a new chat window with fresh context, it would decide to 
+add to the codebase instead of leaving it cleaner than it found it. It would not 
+reuse any functionality that it had previously written, opting rather to re-implement it. 
+Not only that, but every new interaction with the LLM, it adopted its own, new conventions every time,
+rather than adopt any styles from the code that was already written.
+I came to the realization that being able to maintain the code was just as important as the code
+running or compiling. I needed to be able to go to it and  
+
+```python
+print("Hello world")
+```
