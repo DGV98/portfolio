@@ -1,4 +1,11 @@
 import { MDXComponents } from "mdx/types";
+import { isValidElement } from "react";
+import CodeSnippet from "@/components/CodeSnippet";
+
+type CodeElementProps = {
+  className?: string;
+  children?: string;
+};
 
 export function useMDXComponents(
   components: MDXComponents = {},
@@ -13,12 +20,25 @@ export function useMDXComponents(
     p: (props) => (
       <p className="py-2 text-left text-base leading-loose" {...props} />
     ),
-    pre: (props) => (
-      <pre
-        className="mb-2 block max-w-full overflow-x-auto rounded-2xl border-l-2 border-[#f36d33] bg-[#f4f4f4] p-2 font-mono wrap-break-word text-[#666]"
-        {...props}
-      />
-    ),
+    pre: (props) => {
+      const code = props.children;
+
+      // Anything that isn't a fenced block wrapping a single <code> element
+      // falls back to a plain <pre>.
+      if (!isValidElement<CodeElementProps>(code)) {
+        return <pre {...props} />;
+      }
+
+      const { className = "", children = "" } = code.props;
+      const language = className.replace(/^language-/, "") || "text";
+
+      return (
+        <CodeSnippet
+          code={String(children).replace(/\n$/, "")}
+          language={language}
+        />
+      );
+    },
     a: (props) => <a className="text-accent underline" {...props} />,
 
     li: (props) => <li {...props}></li>,

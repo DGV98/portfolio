@@ -4,13 +4,13 @@ export const metadata = {
   isPublished: true,
   slug: "slop",
   description: "What do I mean by AI slop"
-};
+}
 
 # Slop
 
 Everyone uses the term "AI Slop" to refer to the regurgitation of code that 
 an LLM spits out whenever it is prompted to create another project that will surely end up forgotten about in a Github repo.
-This had always puzzled me. I was always on the side of "well if it works, does it really matter?"
+This puzzled me. I was always on the side of "well if it works, does it really matter?"
 I did not understand what it meant to write maintainable code, nor the hours of
 debugging that could have been saved had I just read the documentation.
 
@@ -23,10 +23,10 @@ Developer maintaining a 30+ year old code base. I started to see patterns in the
 decisions that people made over the years, old breadcrumbs left by retired developers.
 This is the type of codebase where the version control system is the comments left behind
 when making a 1 line change. Unfortunately, it was evident that this system had not
-been written with the considerations layed out in [Clean Code](https://en.wikipedia.org/wiki/Robert_C._Martin), the book 
-had not even been written yet. This codebase violates most if not all the principles:
+been written with the principles of *clean code*. Some of the principles had not even been invented yet.
+This codebase violates most, if not all, the principles:
 
-- KISS - Parts of programs were abstracted out into subroutines that are then copied into the same program.
+- KISS - Parts of programs were abstracted out into subroutines that are then copied into the same program
 - DRY - 50% of the files have duplicates with unmaintained code, with a header at the top pointing you to the maintained version 
 - SRP - Subroutines have multiple responsibilities, making it almost impossible to determine the output without a debugger
 - ... and more
@@ -35,11 +35,59 @@ Working through this legacy system, I realized that working with AI is quite sim
 Whenever I would start a new chat window with fresh context, it would decide to 
 add to the codebase instead of leaving it cleaner than it found it. It would not 
 reuse any functionality that it had previously written, opting rather to re-implement it. 
-Not only that, but every new interaction with the LLM, it adopted its own, new conventions every time,
-rather than adopt any styles from the code that was already written.
+Not only that, but every new interaction with the LLM, it adopted its own new conventions every time,
+rather than adopting any styles from the code that was already written.
 I came to the realization that being able to maintain the code was just as important as the code
-running or compiling. I needed to be able to go to it and  
+running or compiling.
 
-```python
-print("Hello world")
+For example, as I was making the blog portion of this site, I was playing around with the idea 
+of adding another section to the page to show the different posts. This was when I first encountered the
+breadcrumbs of code that Opus 4.6 had left behind. While implementing the snapping behavior, it not only
+implemented it in Tailwind CSS, but also in the globals.css. Duplicating the logic and adding nothing.
+
+```css
+.snap-always {
+  scroll-snap-stop: always;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+section {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+}
 ```
+
+All that I wanted was a snapping between sections so a user would always have a section
+on the screen, which can be achieved with Tailwind CSS, the thing I was already using:
+
+```tsx
+<main className="h-screen snap-y snap-mandatory overflow-y-auto">
+  <section
+    className="snap-center"
+  >
+    {children}
+  </section>
+</main>
+```
+
+The frustration here is that it added both, making the animations hard to debug, creating
+more friction than if I had just implemented that feature myself. Not only that, it added animations
+that I did not ask for. I wanted a vertical carousel of sections so that the user would always have some type 
+of content to look at. It delivered, but it also packaged more code than it needed to.
+
+AI has made working on projects easier in the sense that it is able to write many, many, many
+lines of code very quickly. This speedup also comes at the cost of your understanding of the codebase,
+your ability to maintain it, and your ability to debug it. Yes it fixes the issues you point it at, 
+but are you truly sure that it is working on the issue itself? Or is it leaving behind comments, 
+dead code branches, reimplemented logic? All things that you will ultimately have to maintain.

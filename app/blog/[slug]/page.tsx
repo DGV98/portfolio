@@ -15,9 +15,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <div className="w-full max-w-3xl px-8 text-left">
               <Content />
             </div>
-          <div className="flex w-auto px-8 py-4 lg:sticky lg:top-0 lg:h-screen lg:justify-center">
-            <ArticleNav slug={slug} />
-          </div>
+            <div className="flex w-auto px-8 py-4 lg:sticky lg:top-0 lg:h-screen lg:justify-center">
+              <ArticleNav slug={slug} />
+            </div>
           </article>
         </div>
       )
