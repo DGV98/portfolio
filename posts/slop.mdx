@@ -10,21 +10,19 @@ export const metadata = {
 
 Everyone uses the term "AI Slop" to refer to the regurgitation of code that 
 an LLM spits out whenever it is prompted to create another project that will surely end up forgotten about in a Github repo.
-This puzzled me. I was always on the side of "well if it works, does it really matter?"
+This puzzled me as I was always on the side of "well if it works, does it really matter?"
 I did not understand what it meant to write maintainable code, nor the hours of
-debugging that could have been saved had I just read the documentation.
+debugging that could have been saved had I just read the documentation instead of leaving it to the machine.
 
 ## Changed Perspective
 
-While I was making this portfolio site, I used Opus 4.6 heavily to display my
-experience and projects neatly for any recruiter that may stumble onto this site
-([open to work btw](/) 😁). At the time, I was starting my role as a Software 
-Developer maintaining a 30+ year old code base. I started to see patterns in the 
-decisions that people made over the years, old breadcrumbs left by retired developers.
-This is the type of codebase where the version control system is the comments left behind
-when making a 1 line change. Unfortunately, it was evident that this system had not
+I started working on this project the same month I was hired as a Software Developer to maintain a 30+ year old code base.
+It was my first time working on a codebase of this size, and I had to take it in one process at a time.
+I started to see patterns in the decisions that people made over the years, old breadcrumbs left by retired developers.
+This is the type of codebase where the version control system is the comments left behind.
+Unfortunately, it was evident that this system had not
 been written with the principles of *clean code*. Some of the principles had not even been invented yet.
-This codebase violates most, if not all, the principles:
+This codebase violates most, if not all, of the principles:
 
 - KISS - Parts of programs were abstracted out into subroutines that are then copied into the same program
 - DRY - 50% of the files have duplicates with unmaintained code, with a header at the top pointing you to the maintained version 
@@ -35,6 +33,8 @@ Working through this legacy system, I realized that working with AI is quite sim
 Whenever I would start a new chat window with fresh context, it would decide to 
 add to the codebase instead of leaving it cleaner than it found it. It would not 
 reuse any functionality that it had previously written, opting rather to re-implement it. 
+It left the codebases full of comments with emojis explaining pieces of implementation, with no real sense of what
+the "whole" of the project was trying to do. 
 Not only that, but every new interaction with the LLM, it adopted its own new conventions every time,
 rather than adopting any styles from the code that was already written.
 I came to the realization that being able to maintain the code was just as important as the code
@@ -43,7 +43,8 @@ running or compiling.
 For example, as I was making the blog portion of this site, I was playing around with the idea 
 of adding another section to the page to show the different posts. This was when I first encountered the
 breadcrumbs of code that Opus 4.6 had left behind. While implementing the snapping behavior, it not only
-implemented it in Tailwind CSS, but also in the globals.css. Duplicating the logic and adding nothing.
+implemented it in Tailwind CSS, but also in the globals.css, as well as adding some animations that I didn't 
+really ask for.
 
 ```css
 .snap-always {
@@ -81,13 +82,20 @@ on the screen, which can be achieved with Tailwind CSS, the thing I was already 
 </main>
 ```
 
-The frustration here is that it added both, making the animations hard to debug, creating
-more friction than if I had just implemented that feature myself. Not only that, it added animations
-that I did not ask for. I wanted a vertical carousel of sections so that the user would always have some type 
-of content to look at. It delivered, but it also packaged more code than it needed to.
+The frustration here is that the snapping now lived in two places, making the animations hard to debug and creating
+more friction than if I had just implemented that feature myself. I wanted a vertical carousel of sections so that the user would always have some type 
+of content to look at. It delivered, but it also packaged more code than it needed to. It is almost as if 2 developers had differing
+opinions on whether to use Tailwind or Vanilla CSS and chose to go their own routes within the same repo.
 
-AI has made working on projects easier in the sense that it is able to write many, many, many
-lines of code very quickly. This speedup also comes at the cost of your understanding of the codebase,
-your ability to maintain it, and your ability to debug it. Yes it fixes the issues you point it at, 
-but are you truly sure that it is working on the issue itself? Or is it leaving behind comments, 
-dead code branches, reimplemented logic? All things that you will ultimately have to maintain.
+If I were to go through the clean code principles and audit this codebase:
+
+- KISS - I asked for scroll snapping, and got an animation system on top of it
+- DRY - It repeated the same functionality in both Tailwind and CSS, making it hard to debug when snapping wasn't working as expected
+- ... and more
+
+The similarity between the codebase I had spent an afternoon creating and the codebase that had taken 30 years to create across many developers was uncanny.
+For me, slop has come to mean AI's ability to fast track your codebase to legacy. Changing
+directions and implementations with each prompt. It is as if different developers worked throughout a repo without any
+documentation or commit comments to be able to understand what the previous developers were trying to do. 
+I admit that it speeds up the development process, but you reach the point at which your code is unmaintainable much quicker as well.
+
